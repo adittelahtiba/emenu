@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Admin Dashboard E Cafe</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta content="A premium admin dashboard template by Mannatthemes" name="description" />
+	<meta content="Mannatthemes" name="author" />
+
+	<!-- App favicon -->
+	<link rel="shortcut icon" href="../assets/images/favicon.ico" />
+	<link href="../assets/plugins/dropify/css/dropify.min.css" rel="stylesheet" />
+	<!-- App css -->
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
+	<!-- <style>
+		body {
+			zoom:80%;
+			-moz-transform: scale(0.9); -moz-transform-origin: 0px 0px; firefox
+			-moz-zoom:80%;
+			-webkit-zoom: 80%;
+			-moz-transform: scale(70%);
+			-moz-transform-origin: left top;
+
+-ms-transform-origin: left top;
+
+-webkit-transform-origin: left top;
+
+transform-origin: left top;
+		}
+	</style> -->
+</head>
+
+<body class="dark-topbar">
+	<!-- Top Bar Start -->
+	<div class="topbar">
+		<!-- LOGO -->
+		<div class="topbar-left">
+			<a href="../analytics/analytics-index.html" class="logo">
+				<span>
+					<img src="../assets/images/logo-sm.png" alt="logo-small" class="logo-sm" />
+				</span>
+				<span>
+					<img src="../assets/images/logo-dark.png" alt="logo-large" class="logo-lg" />
+				</span>
+				<span>
+					<!-- <img src="../assets/images/logo.png" alt="logo-large" class="logo-light" /> -->
+				</span>
+			</a>
+		</div>
+		<!--end logo-->
+		<!-- Navbar -->
+		<nav class="navbar-custom">
+			<ul class="list-unstyled float-right mb-0">
+				<li class="dropdown">
+					<a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown"
+						href="#" role="button" aria-haspopup="false" aria-expanded="false">
+						<img src="../assets/images/users/test.jpeg" alt="profile-user" class="rounded-circle" />
+						<span class="ml-1 nav-user-name hidden-sm" style="color: black">Harry - De Top <i
+								class="mdi mdi-chevron-down"></i>
+						</span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<!-- <a class="dropdown-item" href="#"><i class="dripicons-user text-muted mr-2"></i> Profile</a>
+              <a class="dropdown-item" href="#"><i class="dripicons-wallet text-muted mr-2"></i> My Wallet</a>
+              <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Settings</a>
+              <a class="dropdown-item" href="#"><i class="dripicons-lock text-muted mr-2"></i> Lock screen</a>
+              <div class="dropdown-divider"></div> -->
+						<a class="dropdown-item" href="#"><i class="dripicons-exit text-muted mr-2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+			<ul class="list-unstyled topbar-nav mb-0">
+				<li>
+					<button class="button-menu-mobile nav-link waves-effect waves-light">
+						<i class="dripicons-menu nav-icon"></i>
+					</button>
+				</li>
+				<li>
+					<span class="ml-1 nav-user-name nav-link hidden-sm" style="color: black">
+						<marquee>Selamat Datang Di Dashboard Admin E-Cafe
+						</marquee>
+					</span>
+				</li>
+				<li class="float-right">
+					<span class="ml-1 nav-user-name nav-link hidden-sm time" style="color: black"></span>
+				</li>
+				<li class="float-right">
+					<span class="ml-1 nav-user-name nav-link hidden-sm date" style="color: black"></span>
+				</li>
+			</ul>
+			<!--end topbar-nav-->
+		</nav>
+		<!-- end navbar-->
+	</div>
+	<!-- Top Bar End -->
+
+	<div class="page-wrapper">
+		<!-- Left Sidenav -->
+		<div class="left-sidenav">
+			<!--end main-icon-menu-->
+
+			<div class="main-menu-inner">
+				<div class="menu-body slimscroll">
+					<div id="MetricaPages" class="main-icon-menu-pane active">
+						<div class="title-box">
+							<h6 class="menu-title">Toolkits</h6>
+						</div>
+						<ul class="nav" style="margin-bottom: 3rem">
+							<li class="nav-item">
+								<a class="nav-link" href="javascript:void(0)" data-toggle="modal"
+									data-animation="bounce" data-target=".edit-logo"><i
+										class="dripicons-photo-group"></i>Edit Logo</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="javascript:void(0)" data-toggle="modal"
+									data-animation="bounce" data-target=".edit-background-logo"><i
+										class="fas fa-file-image"></i>Edit Background Logo</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="javascript:void(0)" data-toggle="modal"
+									data-animation="bounce" data-target=".edit-judul"><i
+										class="mdi mdi-pencil-outline"></i>Edit Judul</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="javascript:void(0)" data-toggle="modal"
+									data-animation="bounce" data-target=".edit-tagline"><i
+										class="dripicons-tags"></i>Edit Tagline</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="javascript:void(0)" data-toggle="modal"
+								data-animation="bounce" data-target=".edit-social-media"><i class="dripicons-link"></i>Edit Social
+									Media</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="javascript:void(0)" data-toggle="modal"
+								data-animation="bounce" data-target=".edit-pdf"><i class="dripicons-document"></i>Edit
+									Daftar Menu</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="javascript:void(0)" data-toggle="modal"
+								data-animation="bounce" data-target=".edit-reservasi"><i class="dripicons-message"></i>Edit
+									Reservasi</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="javascript:void(0)" data-toggle="modal"
+								data-animation="bounce" data-target=".edit-kontak"><i class="far fa-address-book"></i>Edit
+									Kontak</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" target="_blank" href="https://menus.ptmsn.co.id/demod"><i
+										class="far fa-address-book"></i>Lihat Menu Asli</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end Pages -->
+				</div>
+				<!--end menu-body-->
+			</div>
+			<!-- end main-menu-inner-->
+		</div>
+		<!-- end left-sidenav-->
+
+		<!-- Page Content-->
+		<div class="page-content">
+			<div class="container-fluid">
+				<!-- Page-Title -->
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="page-title-box">
+							<iframe src="http://menus.ptmsn.co.id/demod/" class="responsive-frame" id="iframe"
+								frameborder="0"></iframe>
+						</div>
+					</div>
+				</div>
+				<!-- end page title end breadcrumb -->
+			</div>
+			<!-- container -->
+
+			<footer class="footer text-center text-sm-left">
+				&copy; 2021 PT Media Solusi Network
+				<span class="text-muted d-none d-sm-inline-block float-right">Made with <i
+						class="mdi mdi-heart text-danger"></i> by MSN
+					Dev</span>
+			</footer>
+			<!--end footer-->
+		</div>
+		<!-- end page content -->
+	</div>
+	<!-- end page-wrapper -->
+
+	<!-- Modal Edit Logo -->
+	<div class="modal fade edit-logo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header bg-white">
+					<h5 class="modal-title mt-0" id="exampleModalLabel">
+						Modal Ubah Logo
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body bg-white">
+					<form action="">
+						<!-- <p>Edit Logo</p> -->
+						<input type="file" id="input-file-now-custom-1" class="dropify"
+							data-default-file="../assets/plugins/dropify/images/1.jpg" />
+						<p>File Yang diizinkan: PNG, JPG/JPEG</p>
+					</form>
+				</div>
+				<div class="modal-footer bg-white">
+					<button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary waves-effect waves-light">
+						Save changes
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!-- Akhir Modal Edit Logo -->
+
+	<!-- Modal Edit Background Logo -->
+	<div class="modal fade edit-background-logo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header bg-white">
+					<h5 class="modal-title mt-0" id="exampleModalLabel">
+						Modal Ubah Background Logo
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body bg-white">
+					<!-- <p>Edit Logo</p> -->
+					<form action="">
+						<input type="file" id="input-file-now-custom-1" class="dropify"
+							data-default-file="../assets/plugins/dropify/images/1.jpg" />
+						<p>File Yang diizinkan: PNG, JPG/JPEG</p>
+					</form>
+				</div>
+				<div class="modal-footer bg-white">
+					<button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary waves-effect waves-light">
+						Save changes
+					</button>
+				</div>
+			</div>
+
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!-- Modal Akhir Edit Background Logo -->
+
+	<!-- Modal Edit Judul-->
+	<div class="modal fade edit-judul" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header bg-white">
+					<h5 class="modal-title mt-0" id="exampleModalLabel">
+						Modal Edit Judul
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body bg-white">
+					<form action="">
+						<div class="form-group">
+							<label for="judul">Edit Judul</label>
+							<input type="text" class="form-control" id="judul" placeholder="Ketikan Judul" />
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer bg-white">
+					<button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary waves-effect waves-light">
+						Save changes
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!-- Modal Akhir Edit Judul-->
+
+	<!-- Modal Edit Tagline-->
+	<div class="modal fade edit-tagline" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header bg-white">
+					<h5 class="modal-title mt-0" id="exampleModalLabel">
+						Modal Edit Tagline
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body bg-white">
+					<form class="repeater">
+						<div data-repeater-list="category-group">
+							<label for="judul">Edit / Tambah Tagline</label>
+							<div data-repeater-item>
+								<div class="form-group row">
+									<div class="col-sm-10 col-lg-10 col-10">
+										<input type="text" class="form-control" id="judul"
+											placeholder="Ketikan Judul" />
+									</div>
+									<div class="col-sm-2 col-lg-2 col-2">
+										<button type="button" class="btn btn-danger waves-effect" data-repeater-delete
+											type="button">
+											<i class="fa fa-trash"></i>
+										</button>
+									</div>
+								</div>
+								<!-- <input  value="Delete" /> -->
+							</div>
+						</div>
+						<button data-repeater-create type="button" class="btn btn-primary waves-effect">
+							<i class="fa fa-plus"></i>
+						</button>
+					</form>
+					<!--end form-->
+				</div>
+				<div class="modal-footer bg-white">
+					<button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary waves-effect waves-light">
+						Save changes
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!-- Modal Akhir Edit Tagline-->
+
+	<!-- Modal Edit Social Media-->
+	<div class="modal fade edit-social-media" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header bg-white">
+					<h5 class="modal-title mt-0" id="exampleModalLabel">
+						Modal Edit Social Media
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body bg-white">
+					<form action="">
+						<div class="form-group row">
+							<div class="col-sm-6">
+								<label for="Instagram">Edit Instagram <i class="fab fa-instagram"></i></label>
+								<input type="text" class="form-control" id="Instagram" placeholder="Ketikan Link Profile Instagram " />
+							</div>
+
+							<div class="col-sm-6">
+								<label for="facebook">Edit Facebook <i class="fab fa-facebook"></i></label>
+								<input type="text" class="form-control" id="facebook" placeholder="Ketikan Link Profile Facebook " />
+							</div>
+
+						</div>
+
+						<div class="form-group row">
+							<div class="col-sm-6">
+								<label for="facebook">Edit Twitter <i class="fab fa-twitter"></i></label>
+								<input type="text" class="form-control" id="facebook" placeholder="Ketikan Link Profile Twitter " />
+							</div>
+
+							<div class="col-sm-6">
+								<label for="youtube">Edit Youtube <i class="fab fa-youtube"></i></label>
+								<input type="text" class="form-control" id="youtube" placeholder="Ketikan Link Profile Youtube " />
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="alert alert-danger border-0" role="alert">
+									<strong>Informasi</strong> Jika Tidak ada salah satu dari social media di atas, kosongkan inputannya nya</div>
+								</div>
+								
+						</div>
+					</form>
+					<!--end form-->
+				</div>
+				<div class="modal-footer bg-white">
+					<button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary waves-effect waves-light">
+						Save changes
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!-- Modal Akhir Social Media-->
+
+	<!-- Modal Edit Upload PDF Menu -->
+	<div class="modal fade edit-pdf" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header bg-white">
+					<h5 class="modal-title mt-0" id="exampleModalLabel">
+						Modal Ubah Pdf Daftar Menu
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body bg-white">
+					<!-- <p>Edit Logo</p> -->
+					<form action="">
+						<input type="file" id="input-file-now-custom-1" class="dropify"
+							data-default-file="../assets/pdf/menu.pdf" />
+						<p>File Yang diizinkan: .PDF</p>
+					</form>
+				</div>
+				<div class="modal-footer bg-white">
+					<button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary waves-effect waves-light">
+						Save changes
+					</button>
+				</div>
+			</div>
+
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!-- Modal Akhir Edit Upload PDF Menu -->
+
+	<!-- Modal Edit Pesan Reservasi -->
+	<div class="modal fade edit-reservasi" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header bg-white">
+					<h5 class="modal-title mt-0" id="exampleModalLabel">
+						Modal Edit Pesan Reservasi WhatsApp
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body bg-white">
+					<form action="">
+						<div class="form-group">
+							<label for="example-input1-group1">No WhatsApp</label>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">+62</span>
+								</div>
+								<input type="Number" id="example-input1-group1" name="example-input1-group1" class="form-control" placeholder="Ketikan no WhatsApp">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="example-input1-group1">Ketikan Untuk Pesan WhatsApp</label>
+							
+							<textarea name="" id="" class="form-control" cols="30" rows="3" placeholder="Ketikan Pesan Whatsapp contoh (Halo selamat siang, saya ingin pesan )"></textarea>
+							
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer bg-white">
+					<button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary waves-effect waves-light">
+						Save changes
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!-- Modal Akhir Edit Pesan Reservasi-->
+
+	<!-- Modal Edit Kontak -->
+	<div class="modal fade edit-kontak" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header bg-white">
+					<h5 class="modal-title mt-0" id="exampleModalLabel">
+						Modal Edit Kontak
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body bg-white">
+					<form action="">
+						<div class="form-group">
+							<label for="example-input1-group1">No Te</label>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">+62</span>
+								</div>
+								<input type="Number" id="example-input1-group1" name="example-input1-group1" class="form-control" placeholder="Ketikan no WhatsApp">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="example-input1-group1">Ketikan Untuk Pesan WhatsApp</label>
+							
+							<textarea name="" id="" class="form-control" cols="30" rows="3" placeholder="Ketikan Pesan Whatsapp contoh (Halo selamat siang, saya ingin pesan )"></textarea>
+							
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer bg-white">
+					<button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary waves-effect waves-light">
+						Save changes
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!-- Modal Akhir Edit Kontak -->
+
+	<!-- jQuery  -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/metisMenu.min.js"></script>
+	<script src="../assets/js/waves.min.js"></script>
+	<script src="../assets/js/jquery.slimscroll.min.js"></script>
+	<script src="../assets/plugins/dropify/js/dropify.min.js"></script>
+	<script src="../assets/pages/jquery.form-upload.init.js"></script>
+	<!-- <script src="../assets/plugins/repeater/jquery.repeater.min.js"></script> -->
+	<!-- <script src="../assets/pages/jquery.form-repeater.js"></script> -->
+	<script src="../assets/dinamis/dateclock.js"></script>
+	<script src="../assets/dinamis/repeater.js"></script>
+	<!-- App js -->
+	<script src="../assets/js/app.js"></script>
+</body>
+
+</html>
