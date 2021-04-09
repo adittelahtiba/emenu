@@ -1,0 +1,60 @@
+.pt-0 {
+  padding-top: 0;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-food {
+  background: url("../../images/food/bg-mobile.png") no-repeat center center fixed;
+  /* background-repeat: no-repeat; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.img-full {
+  width: 200px;
+}
+
+.baris {
+  text-align: center;
+}
+
+.tombol {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.btn-menu {
+  width: 80%;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+
+.btn-menu:hover {
+  color: white;
+  border: 2px solid white;
+  background-color: none;
+}
+
+.isi {
+  width: 100%;
+  overflow: hidden;
+  display: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* background-color: white; */
+  color: black;
+}
+
+.activee,
+.collapsible:hover {
+  background-color: #0e9753;
+  border: 2px solid #0e9753;
+}

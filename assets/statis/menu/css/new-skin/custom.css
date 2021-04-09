@@ -1,0 +1,138 @@
+.pt-0 {
+  padding-top: 0;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+/* .bg-food {
+  background: url("../../images/food/bg-mobile.jpg") no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+.img-full {
+  width: 200px;
+}
+
+.img-full-desktop {
+  width: 300px;
+  margin-top: 3rem;
+}
+
+.tengah {
+  text-align: center;
+}
+
+.tombol {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.btn-menu {
+  width: 80%;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+
+.btn-menu:hover {
+  color: white;
+  border: 2px solid white;
+  background-color: none;
+}
+
+.isi {
+  width: 100%;
+  overflow: hidden;
+  display: none;
+  margin-top: 1rem;
+  /* margin-bottom: 1rem; */
+  /* background-color: white; */
+  color: black;
+  /* transition: width 2s; */
+}
+
+.social-media-content {
+  width: 100%;
+  /* display: block; */
+  margin-top: 1rem;
+}
+
+.p-l-r-20 {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+/* .icon-shadow {
+  box-shadow: 5px 10px 18px #888888;
+} */
+
+/* .activee,
+.collapsible:hover {
+background-color: #0e9753;
+border: 2px solid #0e9753; */
+/* } */
+
+.isi .activee:active {
+  height: 100%;
+}
+
+.text-putih {
+  color: white;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(139, 139, 139);
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  margin: 10px;
+}
+
+.margin-bawah {
+  margin-bottom: 3rem;
+}
+
+/* .foo {
+  background-color: red;
+} */
+
+/* .map { */
+/* outline: none; */
+/* background-color: white; */
+/* border-bottom: 1px solid white; */
+/* color: white;
+  width: 100%;
+  display: block; */
+/* padding-right: 20px;
+} */
+
+.kontent {
+  /* background-color: white; */
+  color: white;
+  /* padding-left: 12%; */
+  /* text-align: left; */
+}
+
+/* p .kontent {
+  padding-left: 2rem;
+  padding-right: 2rem;
+} */
+
+.garis-bawah {
+  border-bottom: 2px solid white;
+}
