@@ -31,6 +31,7 @@ class Daftar extends CI_Controller
         } else {
             unset($_POST['conf_password']);
             $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $_POST['date_create'] = date('Y-m-d H:i:s');
             $res = $this->M_login->insertdata('pemilik', $_POST);
             if ($res) {
                 $this->session->set_flashdata('message', '<div class=" alert alert-warning" role="alert">

@@ -34,6 +34,13 @@ class M_cafe extends CI_Model
     return   $query->row_array();
   }
 
+  function find_cafe_pemilik($id_pemilik)
+  {
+    $query = $this->db->query("SELECT * FROM cafe Where id_pemilik='" . $id_pemilik . "'");
+
+    return   $query->row_array();
+  }
+
   function find_message($id_cafe)
   {
     $query = $this->db->query("SELECT * FROM message Where id_cafe='" . $id_cafe . "'");
