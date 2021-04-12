@@ -65,7 +65,7 @@ class Pemilik extends CI_Controller
 
     public function edit()
     {
-        if (!isset($_POST['password'])) {
+        if ($_POST['password'] == '') {
             $edit = [
                 'nama_pemilik' => $_POST['nama_pemilik'],
                 'status_aktif' => $_POST['status_aktif'],
