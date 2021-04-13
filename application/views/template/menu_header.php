@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="<?= base_url('assets/statis/menu/'); ?>css/new-skin/custom.css" />
   <style>
     .bg-food {
-      background: url("<?= base_url('assets/statis/menu/'); ?>images/food/<?= $cafe['background_body']; ?>") no-repeat center center fixed;
+      background:linear-gradient(0deg, rgba(83, 83, 83, 0.38), rgba(51, 51, 51, 0.38)), url("<?= base_url('assets/statis/menu/'); ?>images/food/<?= $cafe['background_body']; ?>") no-repeat center center fixed;
       background-repeat: no-repeat;
       background-attachment: fixed;
       -webkit-background-size: cover;
