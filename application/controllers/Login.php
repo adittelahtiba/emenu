@@ -37,19 +37,20 @@ class Login extends CI_Controller
 
         if ($user) {
             if (password_verify($password, $user['password'])) {
-                if ($user['status_aktif'] == 0) {
-                    $this->session->set_flashdata('message', '<div class=" alert alert-warning" role="alert">
-            Akun anda belum Aktif!</div>');
-                    redirect('login/index');
-                } else {
-                    $data = [
-                        'cafe' => 'msn',
-                        'level' => 'pemilik',
-                        'id' => $user['id_pemilik']
-                    ];
-                    $this->session->set_userdata($data);
-                    $this->directpage();
-                }
+                //     if ($user['status_aktif'] == 0) {
+                //         $this->session->set_flashdata('message', '<div class=" alert alert-warning" role="alert">
+                // Akun anda belum Aktif!</div>');
+                //         redirect('login/index');
+                //     } else {
+                $data = [
+                    'cafe' => 'msn',
+                    'level' => 'pemilik',
+                    'id' => $user['id_pemilik'],
+                    'nama' => $user['nama_pemilik']
+                ];
+                $this->session->set_userdata($data);
+                $this->directpage();
+                // }
             } else {
                 $this->session->set_flashdata('message', '<div class=" alert alert-danger" role="alert">
                     Password salah, silahkan ulangi!</div>');
@@ -59,7 +60,8 @@ class Login extends CI_Controller
             $data = [
                 'cafe' => 'msn',
                 'level' => 'superadmin',
-                'id' => '1'
+                'id' => '1',
+                'nama' => 'PT MSN ^.^'
             ];
             $this->session->set_userdata($data);
             $this->directpage();

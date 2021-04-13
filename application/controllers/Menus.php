@@ -18,6 +18,11 @@ class Menus extends CI_Controller
             $this->load->view('error/error_404', $data);
         }
 
+        if ($data['cafe']['status_aktif'] == 0) {
+            echo "<h1>Toko Belum Aktif [sementara]</h1>";
+            die;
+        }
+
         $this->load->view('template/menu_header', $data);
         $this->load->view('menu/v_show');
         $this->load->view('template/menu_footer');

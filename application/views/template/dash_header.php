@@ -42,8 +42,8 @@
 			<ul class="list-unstyled float-right mb-0">
 				<li class="dropdown">
 					<a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-						<img src="<?= base_url(); ?>assets/statis/dashboard-e-cafe/assets/images/users/test.jpeg" alt="profile-user" class="rounded-circle" />
-						<span class="ml-1 nav-user-name hidden-sm" style="color: black">Harry - De Top <i class="mdi mdi-chevron-down"></i>
+						<!-- <img src="<?= base_url(); ?>assets/statis/dashboard-e-cafe/assets/images/users/test.jpeg" alt="profile-user" class="rounded-circle" /> -->
+						<span class="ml-1 nav-user-name hidden-sm" style="color: black"><?= $_SESSION['nama']; ?> <i class="mdi mdi-chevron-down"></i>
 						</span>
 					</a>
 
@@ -53,7 +53,7 @@
               <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Settings</a>
               <a class="dropdown-item" href="#"><i class="dripicons-lock text-muted mr-2"></i> Lock screen</a>
               <div class="dropdown-divider"></div> -->
-						<a class="dropdown-item" href="#"><i class="dripicons-exit text-muted mr-2"></i> Logout</a>
+						<a class="dropdown-item" href="<?= base_url('Login/logout'); ?>"><i class="dripicons-exit text-muted mr-2"></i> Logout</a>
 					</div>
 				</li>
 			</ul>
