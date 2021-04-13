@@ -22,11 +22,15 @@ class Cafe extends CI_Controller
         }
     }
 
+
+
     public function edit_cafe()
     {
-        $data['jsfile'] = 'cafe.js';
+        $data = $this->M_cafe->find_cafe_pemilik($_SESSION['id']);
+        $data['jsfile'] = 'cafeedit.js';
         $this->load->view('template/dash_header', $data);
-        $this->load->view('cafe/v_show');
+        $this->load->view('template/dash_sidebar', $data);
+        $this->load->view('cafe/v_edit_show');
         $this->load->view('template/dash_footer');
     }
 
@@ -116,6 +120,84 @@ class Cafe extends CI_Controller
         echo json_encode($res);
     }
 
+    public function edit_logo()
+    {
+        if (!empty($_FILES["logo_cafe"]["name"])) {
+            $_POST['logo_cafe'] = $this->upload_logo($_POST['id_cafe']);
+        }
+
+        if ($_POST['logo_cafe'] <> "foto gagal") {
+            $dCafe = [
+                'logo_cafe' => $_POST['logo_cafe'],
+            ];
+            $res = $this->M_cafe->updatedata('cafe', $dCafe, ['id_cafe' => $_POST['id_cafe']]);
+        } else {
+            echo "UPLOAD KTP GAGAL SILAHKAN ULANGI";
+            exit;
+        }
+
+
+        echo json_encode($res);
+    }
+
+    public function edit_bg_logo()
+    {
+        if (!empty($_FILES["background"]["name"])) {
+            $_POST['background'] = $this->upload_bg_logo($_POST['id_cafe']);
+        }
+
+        if ($_POST['background'] <> "foto gagal") {
+            $dCafe = [
+                'background' => $_POST['background'],
+            ];
+            $res = $this->M_cafe->updatedata('cafe', $dCafe, ['id_cafe' => $_POST['id_cafe']]);
+        } else {
+            echo "UPLOAD KTP GAGAL SILAHKAN ULANGI";
+            exit;
+        }
+
+
+        echo json_encode($res);
+    }
+    public function edit_bg_menu()
+    {
+        if (!empty($_FILES["background_body"]["name"])) {
+            $_POST['background_body'] = $this->upload_bg_menu($_POST['id_cafe']);
+        }
+
+        if ($_POST['background_body'] <> "foto gagal") {
+            $dCafe = [
+                'background_body' => $_POST['background_body'],
+            ];
+            $res = $this->M_cafe->updatedata('cafe', $dCafe, ['id_cafe' => $_POST['id_cafe']]);
+        } else {
+            echo "UPLOAD KTP GAGAL SILAHKAN ULANGI";
+            exit;
+        }
+
+
+        echo json_encode($res);
+    }
+    public function edit_menu()
+    {
+        if (!empty($_FILES["menu"]["name"])) {
+            $_POST['menu'] = $this->upload_menu($_POST['id_cafe']);
+        }
+
+        if ($_POST['menu'] <> "foto gagal") {
+            $dCafe = [
+                'menu' => $_POST['menu'],
+            ];
+            $res = $this->M_cafe->updatedata('cafe', $dCafe, ['id_cafe' => $_POST['id_cafe']]);
+        } else {
+            echo "UPLOAD KTP GAGAL SILAHKAN ULANGI";
+            exit;
+        }
+
+
+        echo json_encode($res);
+    }
+
 
 
     public function kode_Cafe($cafe)
@@ -137,26 +219,46 @@ class Cafe extends CI_Controller
         return $name;
     }
 
-    public function edit()
+    public function message_edit()
     {
-        if (!isset($_POST['password'])) {
-            $edit = [
-                'nama_pemilik' => $_POST['nama_pemilik'],
-                'status_aktif' => $_POST['status_aktif'],
-            ];
-        } else {
-            $edit = [
-                'nama_pemilik' => $_POST['nama_pemilik'],
-                'status_aktif' => $_POST['status_aktif'],
-                'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
-            ];
-        }
-
         $where = [
-            'id_pemilik' => $_POST['id_pemilik'],
+            'id_cafe' => 0,
         ];
-        unset($_POST['id_pemilik']);
-        $res = $this->M_pemilik->updatedata('pemilik', $edit, $where);
+        $res = $this->M_cafe->deletedata('message', $where);
+        for ($i = 0; $i < count($_POST['category-group']); $i++) {
+            $dMessage = [
+                'id_cafe' => $_POST['id_cafe'],
+                'message' => $_POST['category-group'][$i]['message']
+            ];
+            $res = $this->M_cafe->insertdata('message', $dMessage);
+        }
+        echo json_encode($res);
+    }
+
+    public function sosmed_edit()
+    {
+        $where = [
+            'id_cafe' => $_POST['id_cafe'],
+        ];
+
+        $sosmed = $this->M_cafe->find_sosmed($_POST['id_cafe']);
+
+        if ($sosmed) {
+            $res = $this->M_cafe->updatedata('sosmed', $_POST, $where);
+        } else {
+            $res = $this->M_cafe->insertdata('sosmed', $_POST);
+        }
+        echo json_encode($res);
+    }
+
+    public function cafe_edit()
+    {
+        $where = [
+            'id_cafe' => $_POST['id_cafe'],
+        ];
+        unset($_POST['id_cafe']);
+
+        $res = $this->M_cafe->updatedata('cafe', $_POST, $where);
         echo json_encode($res);
     }
 
@@ -182,5 +284,79 @@ class Cafe extends CI_Controller
         } else {
             return 'foto gagal';
         }
+    }
+
+    public function upload_logo($name)
+    {
+        $config['upload_path']          = APPPATH . '../assets/statis/menu/images/logo/';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|PNG';
+        $config['file_name']            = $name . '-' . date('Ymd') . date('i');
+        $config['overwrite']            = true;
+        $config['max_size']             = 8120; // 5MB
+
+        $this->load->library('upload', $config);
+        $upload = $this->upload->do_upload('logo_cafe');
+        if ($upload) {
+            return $this->upload->data("file_name");
+        } else {
+            return 'foto gagal';
+        }
+    }
+
+    public function upload_bg_logo($name)
+    {
+        $config['upload_path']          = APPPATH . '../assets/statis/menu/images/logo/';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|PNG';
+        $config['file_name']            = $name . '-' . date('Ymd') . date('i');
+        $config['overwrite']            = true;
+        $config['max_size']             = 8120; // 5MB
+
+        $this->load->library('upload', $config);
+        $upload = $this->upload->do_upload('background');
+        if ($upload) {
+            return $this->upload->data("file_name");
+        } else {
+            return 'foto gagal';
+        }
+    }
+
+    public function upload_bg_menu($name)
+    {
+        $config['upload_path']          = APPPATH . '../assets/statis/menu/images/food/';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|PNG';
+        $config['file_name']            = $name . '-' . date('Ymd') . date('i');
+        $config['overwrite']            = true;
+        $config['max_size']             = 8120; // 5MB
+
+        $this->load->library('upload', $config);
+        $upload = $this->upload->do_upload('background_body');
+        if ($upload) {
+            return $this->upload->data("file_name");
+        } else {
+            return 'foto gagal';
+        }
+    }
+
+    public function upload_menu($name)
+    {
+        $config['upload_path']          = APPPATH . '../assets/statis/menu/pdf/';
+        $config['allowed_types']        = '*';
+        $config['file_name']            = $name . '-' . date('Ymd') . date('i');
+        $config['overwrite']            = true;
+        $config['max_size']             = 8120; // 5MB
+
+        $this->load->library('upload', $config);
+        $upload = $this->upload->do_upload('menu');
+        if ($upload) {
+            return $this->upload->data("file_name");
+        } else {
+            return 'foto gagal';
+        }
+    }
+
+    public function collect_data()
+    {
+        $data = $this->M_cafe->get_cafe($_SESSION['id']);
+        echo json_encode($data);
     }
 }

@@ -331,11 +331,10 @@ $(document).ready(function () {
 					allowEnterKey: false,
 					allowOutsideClick: false,
 				})
-
-				$("#tb_data").dataTable().fnReloadAjax('Pemilik/load');
 				//-------------------BELUM FIX-------------------------------------------------------
 			}
 		})
+		$("#tb_data").dataTable().fnReloadAjax('Pemilik/load');
 	});
 
 	$('.modal').on('hidden.bs.modal', function () {
