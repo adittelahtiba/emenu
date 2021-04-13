@@ -27,16 +27,46 @@
                     <button type="button" class="btn-menu collapsible">Contact</button>
                     <div class="isi">
                         <div class="kontent">
-                            <p class="garis-bawah p-l-r-20"><i class="fa fa-phone"></i>&nbsp;&nbsp; <?= $cafe['whatsapp']; ?> &nbsp;&nbsp; <i class="fa fa-whatsapp"></i>&nbsp;&nbsp; <?= $cafe['whatsapp']; ?></p>
-                            <p class="garis-bawah p-l-r-20"><i class="fa fa-envelope"></i>&nbsp;&nbsp; <?= $cafe['email']; ?></p>
-                            <p class="garis-bawah p-l-r-20"><i class="fa fa-map-marker"></i>&nbsp;&nbsp; <?= $cafe['alamat']; ?></p>
+                            <?php
+
+                            if(!empty($cafe['whatsapp'])){
+                                echo '<p class="garis-bawah p-l-r-20"><i class="fa fa-phone"></i>&nbsp;&nbsp;'.$cafe['whatsapp'].' &nbsp;&nbsp; <i class="fa fa-whatsapp"></i>&nbsp;&nbsp;'.$cafe['whatsapp'].' </p>';
+                            }
+
+                            if(!empty($cafe['email'])) {
+                                echo '<p class="garis-bawah p-l-r-20"><i class="fa fa-envelope"></i>&nbsp;&nbsp; '. $cafe['email'].' </p>';
+                            }
+
+                            if(!empty($cafe['alamat'])) {
+                                echo '<p class="garis-bawah p-l-r-20"><i class="fa fa-map-marker"></i>&nbsp;&nbsp; '. $cafe['alamat'].' </p>';
+                            }
+
+                            ?>
+                            
+                            <!-- <p class="garis-bawah p-l-r-20"><i class="fa fa-phone"></i>&nbsp;&nbsp; <?= $cafe['whatsapp']; ?> &nbsp;&nbsp; <i class="fa fa-whatsapp"></i>&nbsp;&nbsp; <?= $cafe['whatsapp']; ?></p> -->
+                            <!-- <p class="garis-bawah p-l-r-20"><i class="fa fa-envelope"></i>&nbsp;&nbsp; <?= $cafe['email']; ?></p> -->
+                            <!-- <p class="garis-bawah p-l-r-20"><i class="fa fa-map-marker"></i>&nbsp;&nbsp; <?= $cafe['alamat']; ?></p> -->
                         </div>
                     </div>
                 </div>
                 <div class="tombol">
-                    <a target="_blank" href="<?= $cafe['maps_url']; ?>">
+                    <?php
+
+                        if(!empty($cafe['maps_url'])) {
+                            echo '<a target="_blank" href="'. $cafe['maps_url'].'">
+                            <button type="button" class="btn-menu">Lokasi</button>
+                            </a>';
+                        }
+                        else {
+                            echo '<a href="javascipt:void(0);">
+                            <button type="button" class="btn-menu">Lokasi</button>
+                            </a>';
+                        }
+                    
+                    ?>
+                    <!-- <a target="_blank" href="<?= $cafe['maps_url']; ?>">
                         <button type="button" class="btn-menu">Lokasi</button>
-                    </a>
+                    </a> -->
                 </div>
                 
                 <div class="social-media-content tengah margin-bawah">
@@ -167,7 +197,7 @@
 					-->
                     <div class="profile no-photo">
                         <!-- profile image -->
-                        <div class="slide" style="background-image: linear-gradient(0deg, rgba(83, 83, 83, 0.3), rgba(51, 51, 51, 0.3)), url(<?= base_url('assets/statis/menu/'); ?>images/logo/bg.jpg)">
+                        <div class="slide" style="background-image: linear-gradient(0deg, rgba(83, 83, 83, 0.53), rgba(51, 51, 51, 0.43)), url(<?= base_url('assets/statis/menu/'); ?>images/logo/bg.jpg)">
                             <img src="<?= base_url('assets/statis/menu/'); ?>images/logo/<?= $cafe['logo_cafe']; ?>" class="img-full-desktop" alt="" />
                         </div>
 
@@ -290,19 +320,64 @@
                             <div class="row">
                                 <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
                                     <div class="map">
-                                        <?= $cafe['maps_embed']; ?>
-                                        <p><a target="_blank" href="">Klik Untuk Melihat Peta Selengkapnya</a></p>
+                                        <?php
+                                            if(!empty( $cafe['maps_embed'])){
+                                                echo ''.$cafe['maps_embed'].'';
+                                            }
+                                            else {
+                                                echo '<img src="'. base_url('assets/statis/img/no-data.png') .'" style="width:100%;" />';
+                                            }
+                                        ?>
+                                        <!-- <?= $cafe['maps_embed']; ?> -->
+                                        <!-- <p><a target="_blank" href="">Klik Untuk Melihat Peta Selengkapnya</a></p> -->
                                     </div>
 
                                     <div class="info-list">
                                         <ul>
-                                            <li><strong>Phone :</strong> <?= $cafe['whatsapp']; ?></li>
-                                            <li><strong>Email :</strong> <?= $cafe['email']; ?></li>
-                                            <li>
-                                                <strong>Sosmed :</strong>
-                                                <p>@<?= $cafe['instagram']; ?></p>
-                                            </li>
-                                            <li><strong>Alamat :</strong> <?= $cafe['alamat']; ?></li>
+                                            <?php   
+                                                if(!empty($cafe['whatsapp'])){
+                                                    echo '<li><strong>No Telepon :</strong> '. $cafe['whatsapp'].'</li>' ;        
+                                                }
+                                                // else {
+                                                //     echo '<li><strong>No Telepon :</strong>-</li>';
+                                                // }
+
+                                                if(!empty($cafe['email'])){
+                                                    echo '<li><strong>Email :</strong> '. $cafe['email'].'</li>';
+                                                }
+                                                // else {
+                                                //     echo '<li><strong>Email :</strong>-</li>';
+                                                // }
+
+                                                if(!empty($cafe['instagram'])){
+                                                    echo '<li><strong>Instagram</strong>'. $cafe['instagram'].'</li>';
+                                                } 
+                                                // else {
+                                                    //     echo '<li><strong>Instagram : </strong>-</li>';
+                                                    // }
+
+                                                if(!empty($cafe['twitter'])){
+                                                    echo '<li><strong>Twitter</strong>'. $cafe['twitter'].'</li>';
+                                                } 
+
+                                                if(!empty($cafe['facebook'])){
+                                                    echo '<li><strong>Facebook</strong>'. $cafe['facebook'].'</li>';
+                                                } 
+
+                                                if(!empty($cafe['youtube'])){
+                                                    echo '<li><strong>Youtube</strong>'. $cafe['youtube'].'</li>';
+                                                } 
+
+                                                if(!empty($cafe['alamat'])){
+                                                    echo '<li style="width:100%;"><strong>Alamat :</strong> '. $cafe['alamat'].'</li>';
+                                                } 
+
+                                                
+                                            ?>
+
+                                        
+                                            
+                                            <!-- <li style="width:100%;"><strong>Alamat :</strong> <?= $cafe['alamat']; ?></li> -->
                                         </ul>
                                     </div>
                                 </div>
