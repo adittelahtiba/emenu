@@ -38,16 +38,41 @@
                         <button type="button" class="btn-menu">Lokasi</button>
                     </a>
                 </div>
+                
                 <div class="social-media-content tengah margin-bawah">
                     <h4 class="text-putih" style="margin-bottom: 12px">Social Media</h4>
-                    <span class="p-l-r-20"><a target="_blank" style="color: #323232" href="https://www.instagram.com/<?= $cafe['instagram']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/instagram.png" style="width: 10%" alt="" /></a>
-                    </span>
-                    <span class="p-l-r-20"><a target="_blank" style="color: #323232" href="https://www.twitter.com/<?= $cafe['twitter']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/twit.png" style="width: 10%" alt="" /></a>
-                    </span>
-                    <span class="p-l-r-20"><a target="_blank" style="color: #323232" href="<?= $cafe['facebook']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/facebook.png" style="width: 10%" alt="" /></a>
-                    </span>
-                    <span class="p-l-r-20"><a target="_blank" style="color: #323232" href="<?= $cafe['youtube']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/youtube.png" style="width: 10%" alt="" /></a>
-                    </span>
+                    
+                    <?php 
+                        if(!empty($cafe['instagram'])) {
+                            echo '<span class="p-l-r-20"><a target="_blank" style="color: #323232" href="https://www.instagram.com/'.$cafe['instagram'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/instagram.png" style="width: 10%" alt="" /></a>
+                            </span>' ;
+                        } 
+
+                        if(!empty($cafe['twitter'])) {
+                            echo '<span class="p-l-r-20"><a target="_blank" style="color: #323232" href="https://www.twitter.com/'. $cafe['twitter'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/twit.png" style="width: 10%" alt="" /></a>
+                            </span>' ;
+                        } 
+
+                        if(!empty($cafe['facebook'])) {
+                            echo 'span class="p-l-r-20"><a target="_blank" style="color: #323232" href="'. $cafe['facebook'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/facebook.png" style="width: 10%" alt="" /></a>
+                            </span>' ;
+                        } 
+
+                        if(!empty($cafe['youtube'])) {
+                            echo '<span class="p-l-r-20"><a target="_blank" style="color: #323232" href="'. $cafe['youtube'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/youtube.png" style="width: 10%" alt="" /></a>
+                            </span>' ;
+                        } 
+                    
+
+                    ?>
+                    <!-- <span class="p-l-r-20"><a target="_blank" style="color: #323232" href="https://www.instagram.com/<?= $cafe['instagram']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/instagram.png" style="width: 10%" alt="" /></a>
+                    </span> -->
+                    <!-- <span class="p-l-r-20"><a target="_blank" style="color: #323232" href="https://www.twitter.com/<?= $cafe['twitter']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/twit.png" style="width: 10%" alt="" /></a>
+                    </span> -->
+                    <!-- <span class="p-l-r-20"><a target="_blank" style="color: #323232" href="<?= $cafe['facebook']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/facebook.png" style="width: 10%" alt="" /></a>
+                    </span> -->
+                    <!-- <span class="p-l-r-20"><a target="_blank" style="color: #323232" href="<?= $cafe['youtube']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/youtube.png" style="width: 10%" alt="" /></a>
+                    </span> -->
                 </div>
             </div>
             <footer>
@@ -161,14 +186,37 @@
 
                         <!-- <div class="row"> -->
                         <div class="col-md-12" style="margin-top: 17px">
-                            <span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.instagram.com/<?= $cafe['instagram']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/instagram-polos.png" style="width: 19.81px" alt="" /></a>
-                            </span>
-                            <span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.twitter.com/<?= $cafe['twitter']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/twitter.png" style="width: 19.81px" alt="" /></a>
-                            </span>
-                            <span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="<?= $cafe['facebook']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/facebook2.png" style="width: 19.81px" alt="" /></a>
-                            </span>
-                            <span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="<?= $cafe['youtube']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/youtube.png" style="width: 19.81px" alt="" /></a>
-                            </span>
+                            <?php 
+                            if(!empty($cafe['instagram'])) {
+                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.instagram.com/.' $cafe['instagram'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/instagram-polos.png" style="width: 19.81px" alt="" /></a>
+                                </span>' ;
+                            } 
+
+                            if(!empty($cafe['twitter'])) {
+                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.twitter.com/'. $cafe['twitter'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/twitter.png" style="width: 19.81px" alt="" /></a>
+                                </span>' ;
+                            } 
+
+                            if(!empty($cafe['facebook'])) {
+                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="'.$cafe['facebook'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/facebook2.png" style="width: 19.81px" alt="" /></a>
+                                </span>' ;
+                            }
+
+                            if(!empty($cafe['youtube'])) {
+                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="'. $cafe['youtube'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/youtube.png" style="width: 19.81px" alt="" /></a>
+                                </span>' ;
+                            }
+                        
+
+                        ?>
+                            <!-- <span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.instagram.com/<?= $cafe['instagram']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/instagram-polos.png" style="width: 19.81px" alt="" /></a>
+                            </span> -->
+                            <!-- <span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.twitter.com/<?= $cafe['twitter']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/twitter.png" style="width: 19.81px" alt="" /></a>
+                            </span> -->
+                            <!-- <span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="<?= $cafe['facebook']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/facebook2.png" style="width: 19.81px" alt="" /></a>
+                            </span> -->
+                            <!-- <span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="<?= $cafe['youtube']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/youtube.png" style="width: 19.81px" alt="" /></a>
+                            </span> -->
                         </div>
 
                         <!-- </div> -->
