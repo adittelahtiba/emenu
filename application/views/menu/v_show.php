@@ -188,7 +188,7 @@
                         <div class="col-md-12" style="margin-top: 17px">
                             <?php 
                             if(!empty($cafe['instagram'])) {
-                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.instagram.com/.' $cafe['instagram'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/instagram-polos.png" style="width: 19.81px" alt="" /></a>
+                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.instagram.com/'. $cafe['instagram'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/instagram-polos.png" style="width: 19.81px" alt="" /></a>
                                 </span>' ;
                             } 
 
