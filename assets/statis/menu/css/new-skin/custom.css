@@ -21,8 +21,9 @@
 }
 
 .img-full-desktop {
-  width: 300px;
-  margin-top: 3rem;
+  width: 250px;
+  margin-top: 2rem;
+  
 }
 
 .tengah {
@@ -135,4 +136,9 @@ footer p {
 
 .garis-bawah {
   border-bottom: 2px solid white;
+}
+
+iframe {
+  width: 100%;
+  height: 220px;
 }
