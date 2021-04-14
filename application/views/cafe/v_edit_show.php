@@ -393,7 +393,7 @@
 						<div class="form-group">
 							<label for="maps_embed">Link Embed Alamat Maps</label>
 							<input type="text" id="maps_embed" name="maps_embed" class="form-control" placeholder='Contoh : <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27424.310575027102!2d107.61754187127167!3d-6.9390382983548715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e86490c3479d%3A0xf5941a5e0075f2b0!2sTurangga%2C%20Lengkong%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1618224429642!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'>
-							<a href="../assets/tutor/New-Tab.webm" target="_blank"><small>Cara Copy Link I frame di google Maps</small></a>
+							<a href="<?= base_url(); ?>assets/statis/video/tutor/tutor.mp4" target="_blank"><small>Cara Copy Link I frame di google Maps</small></a>
 						</div>
 						<div class="form-group">
 							<label for="maps_url">Link Alamat Maps</label>
