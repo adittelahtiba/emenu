@@ -29,20 +29,20 @@
                         <div class="kontent">
                             <?php
 
-                            if(!empty($cafe['whatsapp'])){
-                                echo '<p class="garis-bawah p-l-r-20"><i class="fa fa-phone"></i>&nbsp;&nbsp;'.$cafe['whatsapp'].' &nbsp;&nbsp; <i class="fa fa-whatsapp"></i>&nbsp;&nbsp;'.$cafe['whatsapp'].' </p>';
+                            if (!empty($cafe['whatsapp'])) {
+                                echo '<p class="garis-bawah p-l-r-20"><i class="fa fa-phone"></i>&nbsp;&nbsp;' . $cafe['whatsapp'] . ' &nbsp;&nbsp; <i class="fa fa-whatsapp"></i>&nbsp;&nbsp;' . $cafe['whatsapp'] . ' </p>';
                             }
 
-                            if(!empty($cafe['email'])) {
-                                echo '<p class="garis-bawah p-l-r-20"><i class="fa fa-envelope"></i>&nbsp;&nbsp; '. $cafe['email'].' </p>';
+                            if (!empty($cafe['email'])) {
+                                echo '<p class="garis-bawah p-l-r-20"><i class="fa fa-envelope"></i>&nbsp;&nbsp; ' . $cafe['email'] . ' </p>';
                             }
 
-                            if(!empty($cafe['alamat'])) {
-                                echo '<p class="garis-bawah p-l-r-20"><i class="fa fa-map-marker"></i>&nbsp;&nbsp; '. $cafe['alamat'].' </p>';
+                            if (!empty($cafe['alamat'])) {
+                                echo '<p class="garis-bawah p-l-r-20"><i class="fa fa-map-marker"></i>&nbsp;&nbsp; ' . $cafe['alamat'] . ' </p>';
                             }
 
                             ?>
-                            
+
                             <!-- <p class="garis-bawah p-l-r-20"><i class="fa fa-phone"></i>&nbsp;&nbsp; <?= $cafe['whatsapp']; ?> &nbsp;&nbsp; <i class="fa fa-whatsapp"></i>&nbsp;&nbsp; <?= $cafe['whatsapp']; ?></p> -->
                             <!-- <p class="garis-bawah p-l-r-20"><i class="fa fa-envelope"></i>&nbsp;&nbsp; <?= $cafe['email']; ?></p> -->
                             <!-- <p class="garis-bawah p-l-r-20"><i class="fa fa-map-marker"></i>&nbsp;&nbsp; <?= $cafe['alamat']; ?></p> -->
@@ -52,47 +52,46 @@
                 <div class="tombol">
                     <?php
 
-                        if(!empty($cafe['maps_url'])) {
-                            echo '<a target="_blank" href="'. $cafe['maps_url'].'">
+                    if (!empty($cafe['maps_url'])) {
+                        echo '<a target="_blank" href="' . $cafe['maps_url'] . '">
                             <button type="button" class="btn-menu">Lokasi</button>
                             </a>';
-                        }
-                        else {
-                            echo '<a href="javascipt:void(0);">
+                    } else {
+                        echo '<a href="javascipt:void(0);">
                             <button type="button" class="btn-menu">Lokasi</button>
                             </a>';
-                        }
-                    
+                    }
+
                     ?>
                     <!-- <a target="_blank" href="<?= $cafe['maps_url']; ?>">
                         <button type="button" class="btn-menu">Lokasi</button>
                     </a> -->
                 </div>
-                
+
                 <div class="social-media-content tengah margin-bawah">
                     <h4 class="text-putih" style="margin-bottom: 12px">Social Media</h4>
-                    
-                    <?php 
-                        if(!empty($cafe['instagram'])) {
-                            echo '<span class="p-l-r-20"><a target="_blank" style="color: #323232" href="https://www.instagram.com/'.$cafe['instagram'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/instagram.png" style="width: 10%" alt="" /></a>
-                            </span>' ;
-                        } 
 
-                        if(!empty($cafe['twitter'])) {
-                            echo '<span class="p-l-r-20"><a target="_blank" style="color: #323232" href="https://www.twitter.com/'. $cafe['twitter'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/twit.png" style="width: 10%" alt="" /></a>
-                            </span>' ;
-                        } 
+                    <?php
+                    if (!empty($cafe['instagram'])) {
+                        echo '<span class="p-l-r-20"><a target="_blank" style="color: #323232" href="https://www.instagram.com/' . $cafe['instagram'] . '"><img src="' . base_url('assets/statis/menu/') . 'images/logo/instagram.png" style="width: 10%" alt="" /></a>
+                            </span>';
+                    }
 
-                        if(!empty($cafe['facebook'])) {
-                            echo 'span class="p-l-r-20"><a target="_blank" style="color: #323232" href="'. $cafe['facebook'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/facebook.png" style="width: 10%" alt="" /></a>
-                            </span>' ;
-                        } 
+                    if (!empty($cafe['twitter'])) {
+                        echo '<span class="p-l-r-20"><a target="_blank" style="color: #323232" href="https://www.twitter.com/' . $cafe['twitter'] . '"><img src="' . base_url('assets/statis/menu/') . 'images/logo/twit.png" style="width: 10%" alt="" /></a>
+                            </span>';
+                    }
 
-                        if(!empty($cafe['youtube'])) {
-                            echo '<span class="p-l-r-20"><a target="_blank" style="color: #323232" href="'. $cafe['youtube'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/youtube.png" style="width: 10%" alt="" /></a>
-                            </span>' ;
-                        } 
-                    
+                    if (!empty($cafe['facebook'])) {
+                        echo 'span class="p-l-r-20"><a target="_blank" style="color: #323232" href="' . $cafe['facebook'] . '"><img src="' . base_url('assets/statis/menu/') . 'images/logo/facebook.png" style="width: 10%" alt="" /></a>
+                            </span>';
+                    }
+
+                    if (!empty($cafe['youtube'])) {
+                        echo '<span class="p-l-r-20"><a target="_blank" style="color: #323232" href="' . $cafe['youtube'] . '"><img src="' . base_url('assets/statis/menu/') . 'images/logo/youtube.png" style="width: 10%" alt="" /></a>
+                            </span>';
+                    }
+
 
                     ?>
                     <!-- <span class="p-l-r-20"><a target="_blank" style="color: #323232" href="https://www.instagram.com/<?= $cafe['instagram']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/instagram.png" style="width: 10%" alt="" /></a>
@@ -216,29 +215,29 @@
 
                         <!-- <div class="row"> -->
                         <div class="col-md-12" style="margin-top: 17px">
-                            <?php 
-                            if(!empty($cafe['instagram'])) {
-                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.instagram.com/'. $cafe['instagram'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/instagram-polos.png" style="width: 19.81px" alt="" /></a>
-                                </span>' ;
-                            } 
-
-                            if(!empty($cafe['twitter'])) {
-                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.twitter.com/'. $cafe['twitter'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/twitter.png" style="width: 19.81px" alt="" /></a>
-                                </span>' ;
-                            } 
-
-                            if(!empty($cafe['facebook'])) {
-                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="'.$cafe['facebook'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/facebook2.png" style="width: 19.81px" alt="" /></a>
-                                </span>' ;
+                            <?php
+                            if (!empty($cafe['instagram'])) {
+                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.instagram.com/' . $cafe['instagram'] . '"><img src="' . base_url('assets/statis/menu/') . 'images/logo/instagram-polos.png" style="width: 19.81px" alt="" /></a>
+                                </span>';
                             }
 
-                            if(!empty($cafe['youtube'])) {
-                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="'. $cafe['youtube'].'"><img src="'. base_url('assets/statis/menu/').'images/logo/youtube.png" style="width: 19.81px" alt="" /></a>
-                                </span>' ;
+                            if (!empty($cafe['twitter'])) {
+                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.twitter.com/' . $cafe['twitter'] . '"><img src="' . base_url('assets/statis/menu/') . 'images/logo/twitter.png" style="width: 19.81px" alt="" /></a>
+                                </span>';
                             }
-                        
 
-                        ?>
+                            if (!empty($cafe['facebook'])) {
+                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="' . $cafe['facebook'] . '"><img src="' . base_url('assets/statis/menu/') . 'images/logo/facebook2.png" style="width: 19.81px" alt="" /></a>
+                                </span>';
+                            }
+
+                            if (!empty($cafe['youtube'])) {
+                                echo '<span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="' . $cafe['youtube'] . '"><img src="' . base_url('assets/statis/menu/') . 'images/logo/youtube.png" style="width: 19.81px" alt="" /></a>
+                                </span>';
+                            }
+
+
+                            ?>
                             <!-- <span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.instagram.com/<?= $cafe['instagram']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/instagram-polos.png" style="width: 19.81px" alt="" /></a>
                             </span> -->
                             <!-- <span class="text" style="padding: 10px"><a target="_blank" style="color: #323232" href="https://www.twitter.com/<?= $cafe['twitter']; ?>"><img src="<?= base_url('assets/statis/menu/'); ?>images/logo/twitter.png" style="width: 19.81px" alt="" /></a>
@@ -321,12 +320,11 @@
                                 <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
                                     <div class="map">
                                         <?php
-                                            if(!empty( $cafe['maps_embed'])){
-                                                echo ''.$cafe['maps_embed'].'';
-                                            }
-                                            else {
-                                                echo '<img src="'. base_url('assets/statis/img/no-data.png') .'" style="width:100%;" />';
-                                            }
+                                        if (!empty($cafe['maps_embed'])) {
+                                            echo '' . $cafe['maps_embed'] . '';
+                                        } else {
+                                            echo '<img src="' . base_url('assets/statis/img/no-data.png') . '" style="width:100%;" />';
+                                        }
                                         ?>
                                         <!-- <?= $cafe['maps_embed']; ?> -->
                                         <!-- <p><a target="_blank" href="">Klik Untuk Melihat Peta Selengkapnya</a></p> -->
@@ -334,49 +332,49 @@
 
                                     <div class="info-list">
                                         <ul>
-                                            <?php   
-                                                if(!empty($cafe['whatsapp'])){
-                                                    echo '<li><strong>No Telepon :</strong> '. $cafe['whatsapp'].'</li>' ;        
-                                                }
-                                                // else {
-                                                //     echo '<li><strong>No Telepon :</strong>-</li>';
-                                                // }
+                                            <?php
+                                            if (!empty($cafe['whatsapp'])) {
+                                                echo '<li><strong>No Telepon :</strong> ' . $cafe['whatsapp'] . '</li>';
+                                            }
+                                            // else {
+                                            //     echo '<li><strong>No Telepon :</strong>-</li>';
+                                            // }
 
-                                                if(!empty($cafe['email'])){
-                                                    echo '<li><strong>Email :</strong> '. $cafe['email'].'</li>';
-                                                }
-                                                // else {
-                                                //     echo '<li><strong>Email :</strong>-</li>';
-                                                // }
+                                            if (!empty($cafe['email'])) {
+                                                echo '<li><strong>Email :</strong> ' . $cafe['email'] . '</li>';
+                                            }
+                                            // else {
+                                            //     echo '<li><strong>Email :</strong>-</li>';
+                                            // }
 
-                                                if(!empty($cafe['instagram'])){
-                                                    echo '<li><strong>Instagram</strong>'. $cafe['instagram'].'</li>';
-                                                } 
-                                                // else {
-                                                    //     echo '<li><strong>Instagram : </strong>-</li>';
-                                                    // }
+                                            if (!empty($cafe['instagram'])) {
+                                                echo '<li><strong>Instagram</strong>' . $cafe['instagram'] . '</li>';
+                                            }
+                                            // else {
+                                            //     echo '<li><strong>Instagram : </strong>-</li>';
+                                            // }
 
-                                                if(!empty($cafe['twitter'])){
-                                                    echo '<li><strong>Twitter</strong>'. $cafe['twitter'].'</li>';
-                                                } 
+                                            if (!empty($cafe['twitter'])) {
+                                                echo '<li><strong>Twitter</strong>' . $cafe['twitter'] . '</li>';
+                                            }
 
-                                                if(!empty($cafe['facebook'])){
-                                                    echo '<li><strong>Facebook</strong>'. $cafe['facebook'].'</li>';
-                                                } 
+                                            if (!empty($cafe['facebook'])) {
+                                                echo '<li><strong>Facebook</strong>' . $cafe['facebook'] . '</li>';
+                                            }
 
-                                                if(!empty($cafe['youtube'])){
-                                                    echo '<li><strong>Youtube</strong>'. $cafe['youtube'].'</li>';
-                                                } 
+                                            if (!empty($cafe['youtube'])) {
+                                                echo '<li><strong>Youtube</strong>' . $cafe['youtube'] . '</li>';
+                                            }
 
-                                                if(!empty($cafe['alamat'])){
-                                                    echo '<li style="width:100%;"><strong>Alamat :</strong> '. $cafe['alamat'].'</li>';
-                                                } 
+                                            if (!empty($cafe['alamat'])) {
+                                                echo '<li style="width:100%;"><strong>Alamat :</strong> ' . $cafe['alamat'] . '</li>';
+                                            }
 
-                                                
+
                                             ?>
 
-                                        
-                                            
+
+
                                             <!-- <li style="width:100%;"><strong>Alamat :</strong> <?= $cafe['alamat']; ?></li> -->
                                         </ul>
                                     </div>
