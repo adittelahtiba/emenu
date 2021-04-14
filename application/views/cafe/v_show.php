@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container ">
     <div class="row vh-100 ">
         <div class="col-12 align-self-center">
             <div class="auth-page">
@@ -8,7 +8,7 @@
                             <!--end auth-logo-box-->
 
                             <div class="text-center auth-logo-text">
-                                <h4 class="mt-0 mb-3 mt-5">Daftarkan Cafe</h4>
+                                <h4 class="mt-0 ">Daftarkan Cafe</h4>
                                 <p class="text-muted mb-0">E-MENU</p>
                             </div>
                             <!--end auth-logo-text-->
