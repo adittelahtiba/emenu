@@ -423,7 +423,7 @@
 				</div>
 				</form>
 			</div>
-			<!-- /.modal-content -->
+			<!-- /.modal-contedsnt -->
 		</div>
 		<!-- /.modal-dialog -->
 	</div>
