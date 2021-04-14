@@ -197,7 +197,7 @@
 					-->
                     <div class="profile no-photo">
                         <!-- profile image -->
-                        <div class="slide" style="background-image: linear-gradient(0deg, rgba(83, 83, 83, 0.53), rgba(51, 51, 51, 0.43)), url(<?= base_url('assets/statis/menu/'); ?>images/logo/bg.jpg)">
+                        <div class="slide" style="background-image: linear-gradient(0deg, rgba(83, 83, 83, 0.53), rgba(51, 51, 51, 0.43)), url(<?= base_url('assets/statis/menu/'); ?>images/logo/<?= $cafe['background']; ?>)">
                             <img src="<?= base_url('assets/statis/menu/'); ?>images/logo/<?= $cafe['logo_cafe']; ?>" class="img-full-desktop" alt="" />
                         </div>
 
@@ -286,7 +286,7 @@
 
                             <!-- content -->
                             <div class="row border-line-v">
-                                <embed src="<?= base_url('assets/statis/menu/'); ?>pdf/<?= $cafe['menu']; ?>#toolbar=0&navpanes=0&scrollbar=0&zoom=207" width="100%" height="500" />
+                                <embed src="<?= base_url('assets/statis/menu/'); ?>pdf/<?= $cafe['menu']; ?>#toolbar=0&navpanes=0&scrollbar=0&view=FitH" width="100%" height="500" />
                                 <!-- <iframe src="pdf/menu.pdf" width="100%" height="300px"> </iframe> -->
                                 <!-- <div class="col col-m-12 col-t-12 col-d-12">
 									<div class="post-box"> -->
