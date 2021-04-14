@@ -33,4 +33,8 @@ class M_login extends CI_Model
 
     return   $query->row_array();
   }
+
+   public function isNotLogin($data){
+        return $this->session->userdata($data) === null;
+    }
 }

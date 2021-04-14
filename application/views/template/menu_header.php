@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- Mirrored from bslthemes.com/ryan/demo/blog-post-new.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Mar 2021 08:50:59 GMT -->
@@ -84,7 +85,12 @@
 <!--
 		Favicons
 	-->
-<link rel="shortcut icon" href="images/favicons/favicon.ico" />
+<link rel="shortcut icon" href="images/favicons/<?= base_url('ass') ?>" />
+<style>
+  body {
+    zoom:90%;
+  }
+</style>
 </head>
 
 <body class="bg-food">

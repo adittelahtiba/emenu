@@ -28,6 +28,8 @@ class Login extends CI_Controller
         }
     }
 
+    
+
     private function _login()
     {
         $id = htmlspecialchars($this->input->post('id', true));
@@ -80,6 +82,8 @@ class Login extends CI_Controller
             redirect('cafe');
         }
     }
+
+
 
     public function logout()
     {
