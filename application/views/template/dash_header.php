@@ -1,3 +1,9 @@
+<?php
+if (!$this->session->userdata('cafe')) {
+    $this->session->set_flashdata('message', '<div class="alert alert-danger  alert-dismissable" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Anda Harus login Dulu</div>');
+    redirect('Login');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

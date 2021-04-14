@@ -9,6 +9,7 @@ class Pemilik extends CI_Controller
         // $this->load->database();
         $this->load->library(['form_validation']);
         $this->load->helper(['url', 'language']);
+
     }
 
 
