@@ -9,7 +9,6 @@ class Cafe extends CI_Controller
         // $this->load->database();
         $this->load->library(['form_validation']);
         $this->load->helper(['url', 'language']);
-
     }
 
 
@@ -223,7 +222,7 @@ class Cafe extends CI_Controller
     public function message_edit()
     {
         $where = [
-            'id_cafe' => 0,
+            'id_cafe' => $_POST['id_cafe'],
         ];
         $res = $this->M_cafe->deletedata('message', $where);
         for ($i = 0; $i < count($_POST['category-group']); $i++) {
