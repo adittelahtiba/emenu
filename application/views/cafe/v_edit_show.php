@@ -241,13 +241,13 @@
 					<form autocomplete="off" id="sosmed-form" method="POST" class="form-horizontal" enctype="multipart/form-data" role="form">
 						<input type="text" name="id_cafe" id="id_cafe" value="<?= $id_cafe; ?>" hidden>
 						<div class="form-group row">
-							<div class="col-lg-3">
+							<div class="col-lg-6">
 								<label for="instagram">Username Instagram <i class="fab fa-instagram"></i></label>
-								<input type="text" class="form-control" name="instagram" id="instagram">
+								<input type="text" class="form-control" name="instagram" id="instagram" placeholder="Ketik Username Instagram">
 							</div>
-							<div class="col-lg-3">
+							<div class="col-lg-6">
 								<label for="twitter">Username Twitter <i class="fab fa-twitter"></i></label>
-								<input type="text" class="form-control" name="twitter" id="twitter">
+								<input type="text" class="form-control" name="twitter" id="twitter" placeholder="Ketik Username Twitter">
 							</div>
 
 
@@ -255,13 +255,15 @@
 						</div>
 
 						<div class="form-group row">
-							<div class="col-lg-9">
+							<div class="col-lg-12">
 								<label for="facebook">Link Profil Facebook <i class="fab fa-facebook"></i></label>
-								<input type="text" class="form-control" name="facebook" id="facebook">
+								<input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ketik Link Profil Facebook">
 							</div>
-							<div class="col-lg-9">
-								<label for="youtube">Link Youtube <i class="fab fa-youtube"></i></label>
-								<input type="text" class="form-control" name="youtube" id="youtube">
+						</div>
+						<div class="form-group row">
+							<div class="col-lg-12">
+								<label for="youtube">Link Profil Youtube <i class="fab fa-youtube"></i></label>
+								<input type="text" class="form-control" name="youtube" id="youtube" placeholder="Ketik Link Profil Youtube">
 							</div>
 						</div>
 
