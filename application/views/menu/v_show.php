@@ -83,7 +83,7 @@
                     }
 
                     if (!empty($cafe['facebook'])) {
-                        echo 'span class="p-l-r-20"><a target="_blank" style="color: #323232" href="' . $cafe['facebook'] . '"><img src="' . base_url('assets/statis/menu/') . 'images/logo/facebook.png" style="width: 10%" alt="" /></a>
+                        echo '<span class="p-l-r-20"><a target="_blank" style="color: #323232" href="' . $cafe['facebook'] . '"><img src="' . base_url('assets/statis/menu/') . 'images/logo/facebook.png" style="width: 10%" alt="" /></a>
                             </span>';
                     }
 
