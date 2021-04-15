@@ -132,7 +132,7 @@ class Cafe extends CI_Controller
             ];
             $res = $this->M_cafe->updatedata('cafe', $dCafe, ['id_cafe' => $_POST['id_cafe']]);
         } else {
-            echo "UPLOAD KTP GAGAL SILAHKAN ULANGI";
+            echo "UPLOAD LOGO KAFE SILAHKAN ULANGI";
             exit;
         }
 
@@ -152,7 +152,7 @@ class Cafe extends CI_Controller
             ];
             $res = $this->M_cafe->updatedata('cafe', $dCafe, ['id_cafe' => $_POST['id_cafe']]);
         } else {
-            echo "UPLOAD KTP GAGAL SILAHKAN ULANGI";
+            echo "UPLOAD BACKGROUND LOGO SILAHKAN ULANGI";
             exit;
         }
 
@@ -171,7 +171,7 @@ class Cafe extends CI_Controller
             ];
             $res = $this->M_cafe->updatedata('cafe', $dCafe, ['id_cafe' => $_POST['id_cafe']]);
         } else {
-            echo "UPLOAD KTP GAGAL SILAHKAN ULANGI";
+            echo "UPLOAD BACKGROUND GAGAL SILAHKAN ULANGI";
             exit;
         }
 
@@ -190,7 +190,7 @@ class Cafe extends CI_Controller
             ];
             $res = $this->M_cafe->updatedata('cafe', $dCafe, ['id_cafe' => $_POST['id_cafe']]);
         } else {
-            echo "UPLOAD KTP GAGAL SILAHKAN ULANGI";
+            echo "UPLOAD FOTO SILAHKAN ULANGI";
             exit;
         }
 
@@ -340,7 +340,8 @@ class Cafe extends CI_Controller
     public function upload_menu($name)
     {
         $config['upload_path']          = APPPATH . '../assets/statis/menu/pdf/';
-        $config['allowed_types']        = '*';
+        $config['allowed_types']        = 'pdf';
+        // $config['allowed_types']        = '*';
         $config['file_name']            = $name . '-' . date('Ymd') . date('i');
         $config['overwrite']            = true;
         $config['max_size']             = 8120; // 5MB
@@ -350,7 +351,7 @@ class Cafe extends CI_Controller
         if ($upload) {
             return $this->upload->data("file_name");
         } else {
-            return 'foto gagal';
+            return 'Upload menu gagal';
         }
     }
 

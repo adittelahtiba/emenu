@@ -14,7 +14,7 @@ class Login extends CI_Controller
     {
         $this->load->view('template/auth_header', $this->data);
         $this->load->view('login/v_show');
-        $this->load->view('template/dash_footer');
+        // $this->load->view('template/dash_footer');
     }
 
     public function login()

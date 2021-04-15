@@ -1,6 +1,6 @@
 <?php
 if (!$this->session->userdata('cafe')) {
-    $this->session->set_flashdata('message', '<div class="alert alert-danger  alert-dismissable" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Anda Harus login Dulu</div>');
+    $this->session->set_flashdata('message', '<div class="alert alert-danger  alert-dismissable" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>Anda Harus login Dulu</div>');
     redirect('Login');
 }
 ?>
@@ -15,7 +15,7 @@ if (!$this->session->userdata('cafe')) {
 	<meta content="Mannatthemes" name="author" />
 
 	<!-- App favicon -->
-	<link rel="shortcut icon" href="<?= base_url(); ?>assets/statis/dashboard-e-cafe/assets/images/favicon.ico" />
+	<link rel="shortcut icon" href="<?= base_url(); ?>assets/statis/img/logo-saja.png" />
 	<link href="<?= base_url(); ?>assets/statis/dashboard-e-cafe/assets/plugins/dropify/css/dropify.min.css" rel="stylesheet" />
 	<!-- App css -->
 	<link href="<?= base_url(); ?>assets/statis/dashboard-e-cafe/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -30,15 +30,15 @@ if (!$this->session->userdata('cafe')) {
 	<div class="topbar">
 		<!-- LOGO -->
 		<div class="topbar-left">
-			<a href="<?= base_url(); ?>assets/statis/dashboard-e-cafe/analytics/analytics-index.html" class="logo">
+			<a href="javascript:void(0)" class="logo">
 				<span>
-					<img src="<?= base_url(); ?>assets/statis/dashboard-e-cafe/assets/images/logo-sm.png" alt="logo-small" class="logo-sm" />
+					<img src="<?= base_url(); ?>assets/statis/img/logo-aja-putih.png" alt="logo-small" class="logo-sm" />
 				</span>
+				<!-- <span>
+					<img src="<?= base_url(); ?>assets/statis/img/tulisan.png" alt="logo-large" class="logo-lg hidden-sm" />
+				</span> -->
 				<span>
-					<img src="<?= base_url(); ?>assets/statis/dashboard-e-cafe/assets/images/logo-dark.png" alt="logo-large" class="logo-lg" />
-				</span>
-				<span>
-					<!-- <img src="<?= base_url(); ?>assets/statis/dashboard-e-cafe/assets/images/logo.png" alt="logo-large" class="logo-light" /> -->
+					<img src="<?= base_url(); ?>assets/statis/img/tulisan.png" alt="logo-large" style="width:35%;" class=" hidden-sm" />
 				</span>
 			</a>
 		</div>

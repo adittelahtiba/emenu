@@ -2,7 +2,7 @@
     <template class="ad__mobile">
         <div class="stater">
             <div class="tengah">
-                <img src="<?= base_url('assets/statis/menu/'); ?>images/logo/<?= $cafe['logo_cafe']; ?>" class="img-full" alt="" />
+                <img src="<?= base_url('assets/statis/menu/'); ?>images/logo/<?= $cafe['logo_cafe']; ?>" class="img-full" style="margin-top:1rem;margin-bottom:1rem;" alt="" />
                 <div class="tombol">
                     <a href="<?= base_url('assets/statis/menu/'); ?>pdf/<?= $cafe['menu']; ?>" target="_blank">
                         <button type="button" class="btn-menu">Menu</button>
@@ -125,7 +125,7 @@
 
             <!-- background -->
             <div class="background gradient">
-                <ul class="bg-bubbles" style="background-image: url('<?= base_url('assets/statis/menu/'); ?>images/food/<?= $cafe['background_body']; ?>')">
+                <ul class="bg-bubbles" style="background-image: url('<?= base_url('assets/statis/menu/'); ?>images/food/<?= $cafe['background_body']; ?>');background-repeat:no-repeat;background-size:cover">
                     <li></li>
                     <li></li>
                     <li></li>
