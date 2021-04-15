@@ -14,7 +14,8 @@ class Pemilik extends CI_Controller
 
 
     public function index()
-    {
+    {   
+        
         $data['jsfile'] = 'pemilik.js';
         $this->load->view('template/dash_header', $data);
         $this->load->view('pemilik/v_show');

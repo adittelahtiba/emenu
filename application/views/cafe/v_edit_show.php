@@ -14,16 +14,7 @@
 		</div>
 		<!-- container -->
 
-		<footer class="footer text-center text-sm-left">
-			&copy; 2021 PT Media Solusi Network
-			<span class="text-muted d-none d-sm-inline-block float-right">Made with <i class="mdi mdi-heart text-danger"></i> by MSN
-				Dev</span>
-		</footer>
-		<!--end footer-->
-	</div>
-	<!-- end page content -->
-	</div>
-	<!-- end page-wrapper -->
+		
 
 	<!-- Modal Edit Logo -->
 	<div class="modal fade edit-logo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -423,7 +414,7 @@
 				</div>
 				</form>
 			</div>
-			<!-- /.modal-contedsnt -->
+			<!-- /.modal-contedasdsnt -->
 		</div>
 		<!-- /.modal-dialog -->
 	</div>
